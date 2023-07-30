@@ -39,7 +39,8 @@
 
 <script setup lang="ts">
 import Notification from "../components/Notification.vue";
-import {ref} from "vue";
+import {Ref, ref} from "vue";
+type notificationType = 'success' | 'error' | '';
 
 const mgApiUrl = import.meta.env.VITE_API_URL
 const mgProxyKey = import.meta.env.VITE_API_KEY
@@ -47,7 +48,7 @@ const mgToMail = import.meta.env.VITE_TO_MAIL
 const showInvalidEmail = ref(false);
 let email = "";
 
-const showNotification = ref("");
+const showNotification: Ref<notificationType> = ref("");
 const notificationTitle = ref("");
 const notificationText = ref("");
 
