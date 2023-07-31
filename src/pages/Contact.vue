@@ -1,9 +1,9 @@
 <template>
   <div class="bg-white w-full flex text-center justify-center">
     <div class="my-16 w-8/12">
-      <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Terms of use</h1>
+      <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Contact</h1>
       <div class="mt-8 w-full text-center">
-        <p></p>
+        <a href="mailto:hi@mattiamueggler.ch">hi@mattiamueggler.ch</a>
       </div>
     </div>
   </div>
@@ -15,6 +15,6 @@
 import {onMounted} from "vue";
 
 onMounted(() => {
-  document.title = 'Terms of use | Generated Notion Forms'
+  document.title = 'Contact | Generated Notion Forms'
 })
 </script>

@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-white w-screen flex justify-center md:mt-32 sm:mt-0 mt-36"> <!-- items-center -->
-    <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8 lg:py-16">
+  <div class="bg-white w-screen flex justify-center"> <!-- items-center -->
+    <div class="px-6 pt-24 sm:px-6 sm:pt-32 lg:px-8 lg:pt-16">
       <div class="mx-auto w-full text-center">
         <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           <span>create </span>
@@ -39,7 +39,7 @@
 
 <script setup lang="ts">
 import Notification from "../components/Notification.vue";
-import {Ref, ref} from "vue";
+import {onMounted, Ref, ref} from "vue";
 type notificationType = 'success' | 'error' | '';
 
 const mgApiUrl = import.meta.env.VITE_API_URL
@@ -51,6 +51,10 @@ let email = "";
 const showNotification: Ref<notificationType> = ref("");
 const notificationTitle = ref("");
 const notificationText = ref("");
+
+onMounted(() => {
+  document.title = 'Home | Generated Notion Forms'
+})
 
 async function sendMail() {
   if (!isValidEmail(email)) {

@@ -1,0 +1,23 @@
+<template>
+  <footer class="bg-white h-24 absolute inset-x-0 bottom-0 py-4">
+    <div class="overflow-hidden">
+      <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
+        <div v-for="item in navigation" :key="item.name" class="pb-6">
+          <a :href="item.href" class="text-sm leading-6 text-gray-600 hover:text-gray-900">{{ item.name }}</a>
+        </div>
+      </nav>
+      <p class="mt-6 text-center text-xs leading-5 text-gray-500">&copy; {{ new Date().getFullYear() }} Generated Notion Forms from <a href="https://mattiamueggler.ch">mattiamueggler.ch.</a> All rights reserved.</p>
+    </div>
+  </footer>
+</template>
+
+<style scoped></style>
+
+<script setup lang="ts">
+const navigation = [
+  { name: 'Home', href: '/' },
+  { name: 'Privacy policy', href: '/privacy-policy' },
+  { name: 'Terms of use', href: '/terms-of-use' },
+  { name: 'Contact', href: '/contact' },
+]
+</script>
