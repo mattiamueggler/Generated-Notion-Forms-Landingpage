@@ -4,6 +4,11 @@ import { router } from './router';
 import App from './App.vue'
 import Plausible from 'plausible-tracker'
 
+const app = createApp(App);
+app.use(router);
+app.mount('#app');
+
+
 const plausibleDomain = import.meta.env.VITE_PLAUSIBLE_DOMAIN
 const plausibleHost = import.meta.env.VITE_PLAUSIBLE_HOST
 
@@ -19,7 +24,3 @@ const { trackPageview } = Plausible({
     trackLocalhost: true,
 })
 trackPageview()
-
-const app = createApp(App);
-app.use(router);
-app.mount('#app');
