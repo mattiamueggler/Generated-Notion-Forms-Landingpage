@@ -24,28 +24,10 @@ jobs:
       - name: Build
         run: |
           npm run build
-        env:
-          VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
-          VITE_API_URL: ${{ env.VITE_API_URL }}
-          VITE_TO_MAIL: ${{ env.VITE_TO_MAIL }}
       - name: Publish
         uses: actions/upload-pages-artifact@v1
         with:
           path: dist/
-      - name: Log env
-        run: |
-          echo "-- VITE_API_URL --"
-          echo "$VITE_API_URL"
-          echo "${VITE_API_URL}"
-          echo "${{ env.VITE_API_URL }}"
-          echo "-- VITE_TO_MAIL --"
-          echo "$VITE_TO_MAIL"
-          echo "${VITE_TO_MAIL}"
-          echo "${{ env.VITE_TO_MAIL }}"
-        env:
-          VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
-          VITE_API_URL: ${{ env.VITE_API_URL }}
-          VITE_TO_MAIL: ${{ env.VITE_TO_MAIL }}
 
   deploy:
     needs: build
