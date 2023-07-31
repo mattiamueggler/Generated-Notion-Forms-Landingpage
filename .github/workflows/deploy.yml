@@ -11,8 +11,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
+    environment: github-pages
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -36,13 +35,13 @@ jobs:
           path: dist/
       - name: Log env
         run: |
+          echo "-- VITE_API_URL --"
           echo "$VITE_API_URL"
           echo "${VITE_API_URL}"
-          echo "VITE_API_URL"
           echo "${{ env.VITE_API_URL }}"
+          echo "-- VITE_TO_MAIL --"
           echo "$VITE_TO_MAIL"
           echo "${VITE_TO_MAIL}"
-          echo "VITE_TO_MAIL"
           echo "${{ env.VITE_TO_MAIL }}"
         env:
           VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
