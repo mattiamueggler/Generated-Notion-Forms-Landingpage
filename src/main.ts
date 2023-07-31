@@ -8,6 +8,8 @@ const plausibleDomain = import.meta.env.VITE_PLAUSIBLE_DOMAIN
 const plausibleHost = import.meta.env.VITE_PLAUSIBLE_HOST
 
 if (plausibleDomain == "" || plausibleHost == "") {
+    console.log(plausibleDomain)
+    console.log(plausibleHost)
     throw new Error('Plausible could not be initialized!');
 }
 
