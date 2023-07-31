@@ -27,6 +27,8 @@ jobs:
         env:
           VITE_API_URL: ${{ env.VITE_API_URL }}
           VITE_TO_MAIL: ${{ env.VITE_TO_MAIL }}
+          VITE_PLAUSIBLE_DOMAIN: ${{ env.VITE_PLAUSIBLE_DOMAIN }}
+          VITE_PLAUSIBLE_HOST: ${{ env.VITE_PLAUSIBLE_HOST }}
           VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
       - name: Publish
         uses: actions/upload-pages-artifact@v1
