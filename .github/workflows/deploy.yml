@@ -8,6 +8,11 @@ on:
     branches:
       - main
 
+env:
+  VITE_API_KEY: env.VITE_API_KEY
+  VITE_API_URL: env.VITE_API_URL
+  VITE_TO_MAIL: env.VITE_TO_MAIL
+
 jobs:
   build:
     runs-on: ubuntu-latest
