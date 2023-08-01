@@ -4,9 +4,12 @@ import { router } from './router';
 import App from './App.vue'
 import Plausible from 'plausible-tracker'
 
-const plausibleDomain: string = import.meta.env.VITE_PLAUSIBLE_DOMAIN
-const plausibleHost: string = import.meta.env.VITE_PLAUSIBLE_HOST
+const mgApiUrl = import.meta.env.VITE_API_URL
+const plausibleDomain = import.meta.env.VITE_PLAUSIBLE_DOMAIN
+const plausibleHost = import.meta.env.VITE_PLAUSIBLE_HOST
 
+console.log("mgApiUrl: ")
+console.log(mgApiUrl)
 console.log(import.meta.env.VITE_PLAUSIBLE_HOST)
 console.log(import.meta.env.VITE_PLAUSIBLE_DOMAIN)
 
