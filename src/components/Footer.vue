@@ -1,6 +1,6 @@
 <template>
-  <footer class="bg-white h-24 absolute inset-x-0 bottom-0 py-4">
-    <div class="overflow-hidden">
+  <footer class="bg-white h-24 inset-x-0 bottom-0 py-4">
+    <div class="mx-auto max-w-7xl overflow-hidden px-6 lg:px-8">
       <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
         <div v-for="item in navigation" :key="item.name" class="pb-6">
           <a :href="item.href" class="text-sm leading-6 text-gray-600 hover:text-gray-900">{{ item.name }}</a>

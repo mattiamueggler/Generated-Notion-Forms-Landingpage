@@ -14,12 +14,12 @@ if (plausibleDomain == "" || plausibleHost == "") {
     throw new Error('Plausible could not be initialized!');
 }
 
-const { trackPageview } = Plausible({
-    apiHost: plausibleHost,
-    domain: plausibleDomain,
-    trackLocalhost: true,
-})
-trackPageview()
+// const { trackPageview } = Plausible({
+//     apiHost: plausibleHost,
+//     domain: plausibleDomain,
+//     trackLocalhost: true,
+// })
+// trackPageview()
 
 const app = createApp(App);
 app.use(router);

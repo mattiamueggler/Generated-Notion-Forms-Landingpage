@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-white w-screen flex justify-center"> <!-- items-center -->
-    <div class="px-6 pt-24 sm:px-6 sm:pt-32 lg:px-8 lg:pt-16">
+  <div class="bg-white w-screen flex justify-center">
+    <div class="px-6 sm:px-6 lg:px-8 pt-24 sm:pt-32 lg:pt-16 pb-36 sm:pb-64 md:pb-64 lg:pb-64">
       <div class="mx-auto w-full text-center">
         <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           <span>create </span>
