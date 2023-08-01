@@ -6,6 +6,7 @@ import Plausible from 'plausible-tracker'
 
 console.log(import.meta.env.VITE_PLAUSIBLE_DOMAIN)
 console.log(import.meta.env.VITE_PLAUSIBLE_HOST)
+console.log(import.meta.env.VITE_TO_MAIL)
 
 const plausibleDomain = import.meta.env.VITE_PLAUSIBLE_DOMAIN
 const plausibleHost = import.meta.env.VITE_PLAUSIBLE_HOST
