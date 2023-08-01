@@ -40,6 +40,29 @@
 <script setup lang="ts">
 import Notification from "../components/Notification.vue";
 import {onMounted, Ref, ref} from "vue";
+import Plausible from 'plausible-tracker'
+
+const mgApiUrl2 = import.meta.env.VITE_API_URL
+const plausibleDomain = import.meta.env.VITE_PLAUSIBLE_DOMAIN
+const plausibleHost = import.meta.env.VITE_PLAUSIBLE_HOST
+
+console.log("mgApiUrl2: ")
+console.log(mgApiUrl2)
+console.log(import.meta.env.VITE_PLAUSIBLE_HOST)
+console.log(import.meta.env.VITE_PLAUSIBLE_DOMAIN)
+
+if (plausibleDomain == "" || plausibleHost == "") {
+  throw new Error('Plausible could not be initialized!');
+}
+
+const { trackPageview } = Plausible({
+  apiHost: plausibleHost,
+  domain: plausibleDomain,
+  trackLocalhost: true,
+})
+trackPageview()
+
+
 type notificationType = 'success' | 'error' | '';
 
 const mgApiUrl = import.meta.env.VITE_API_URL
