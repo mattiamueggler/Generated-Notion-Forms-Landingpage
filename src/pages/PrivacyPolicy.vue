@@ -179,7 +179,12 @@
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+ul {
+  text-indent: -25px; /* key property */
+  margin-left: 10px; /* key property */
+}
+</style>
 
 <script setup lang="ts">
 
