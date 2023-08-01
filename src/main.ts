@@ -4,6 +4,9 @@ import { router } from './router';
 import App from './App.vue'
 import Plausible from 'plausible-tracker'
 
+console.log(import.meta.env.VITE_PLAUSIBLE_DOMAIN)
+console.log(import.meta.env.VITE_PLAUSIBLE_HOST)
+
 const plausibleDomain = import.meta.env.VITE_PLAUSIBLE_DOMAIN
 const plausibleHost = import.meta.env.VITE_PLAUSIBLE_HOST
 
