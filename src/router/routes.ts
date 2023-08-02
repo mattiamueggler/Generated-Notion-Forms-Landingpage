@@ -3,6 +3,7 @@ import Home from "../pages/Home.vue";
 import PrivacyPolicy from "../pages/PrivacyPolicy.vue";
 import TermsOfUse from "../pages/TermsOfUse.vue";
 import Contact from "../pages/Contact.vue";
+import NotFound from "../pages/NotFound.vue";
 
 export const routes: RouteRecordRaw[] = [
     {
@@ -24,5 +25,10 @@ export const routes: RouteRecordRaw[] = [
         path: '/contact',
         name: 'Contact',
         component: Contact,
+    },
+    {
+        path: '/:pathMatch(.*)*',
+        name: '404',
+        component: NotFound,
     },
 ];
