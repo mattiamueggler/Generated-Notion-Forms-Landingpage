@@ -30,23 +30,15 @@ jobs:
           VITE_TO_MAIL: ${{ vars.VITE_TO_MAIL }}
           VITE_PLAUSIBLE_DOMAIN: ${{ vars.VITE_PLAUSIBLE_DOMAIN }}
           VITE_PLAUSIBLE_HOST: ${{ vars.VITE_PLAUSIBLE_HOST }}
-      - name: Publish
-        uses: actions/upload-pages-artifact@v1
+#      - name: Publish
+#        uses: actions/upload-pages-artifact@v1
+#        with:
+#          path: dist/
+      - name: Deploy to netlify
+        uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         with:
-          path: dist/
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
-        with:
-          artifact_name: github-pages
+          args: deploy --dir=build --prod
+          secrets: '["DEV_NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID
