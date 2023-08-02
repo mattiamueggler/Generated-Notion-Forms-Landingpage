@@ -36,17 +36,9 @@ jobs:
           VITE_PLAUSIBLE_DOMAIN: ${{ vars.VITE_PLAUSIBLE_DOMAIN }}
           VITE_PLAUSIBLE_HOST: ${{ vars.VITE_PLAUSIBLE_HOST }}
       - name: Publish on gitlab-pages
-        uses: crazy-max/ghaction-github-pages@v2.0.1
+        uses: actions/upload-pages-artifact@v1
         with:
-          target_branch: main
-          build_dir: dist
-          committer: DeployBot <bot@mattiamueggler.ch>
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#      - name: Publish on gitlab-pages
-#        uses: actions/upload-pages-artifact@v1
-#        with:
-#          path: dist/
+          path: dist/
 #      - name: Publish on netlify
 #        run: |
 #          npx netlify-cli deploy --site ${NETLIFY_SITE_ID} --auth ${NETLIFY_AUTH_TOKEN} --prod --dir dist
