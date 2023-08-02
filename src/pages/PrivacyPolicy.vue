@@ -171,7 +171,7 @@
         <p>If you have any questions about this Privacy Policy, You can contact us:</p>
         <ul class="list-disc list-inside">
           <li>
-            By email: <a href="mailto:hi@generated-notion-forms.com">hi@generated-notion-forms.com</a>
+            By email: <a :href="'mailto:' + mgToMail">{{ mgToMail }}</a>
           </li>
         </ul>
       </div>
@@ -189,6 +189,9 @@ ul {
 <script setup lang="ts">
 
 import {onMounted} from "vue";
+
+const mgToMail = import.meta.env.VITE_TO_MAIL
+
 
 onMounted(() => {
   document.title = 'Privacy Policy | Generated Notion Forms'

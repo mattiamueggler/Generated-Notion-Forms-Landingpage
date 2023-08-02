@@ -85,7 +85,7 @@ async function sendMail() {
   }
   showNotification.value = "error"
   notificationTitle.value = "Failed to register"
-  notificationText.value = "An error has occurred. Please send an email to hi@mattiamueggler.ch. We apologize for the inconvenience. t."
+  notificationText.value = `An error has occurred. Please send an email to ${mgToMail}. We apologize for the inconvenience.`
 }
 
 function isValidEmail(email: string): boolean {
