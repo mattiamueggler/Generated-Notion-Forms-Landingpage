@@ -9,7 +9,7 @@
           <span>Coming soon</span>
         </h2>
         <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">
-          You want to turn your Notion databases into forms automatically. No problem, that's why 'generated notion forms' is developed with many more very useful features. Don't worry, we will release as soon as possible with a free subscription or a very good offer.
+          You would like to convert your Notion databases into forms in an automated way? No problem, that's why we are developing 'generated notion forms' with a lot of other very useful features. Don't worry. We will release it as soon as possible with a free subscription or a very good offer.
         </p>
       </div>
       <div class="mx-auto w-full mt-16">
